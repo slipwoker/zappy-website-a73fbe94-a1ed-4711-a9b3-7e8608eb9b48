@@ -4715,6 +4715,330 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* Added Component Styles */
+
+
+/* Added Component Styles */
+
+
+/* Added Component Styles */
+
+
+/* Added Component Styles */
+
+
+/* Added Component Styles */
+```css
+.certification-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.certification-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(196, 90, 61, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.certification-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.certification-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.certification-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--primary) 0%, #8B4513 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.certification-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: #495057;
+  margin: 0;
+  font-weight: 500;
+}
+
+.certification-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 968px) {
+  .certification-content {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.certification-image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.certification-image-wrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.certification-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.certification-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(196, 90, 61, 0.3);
+  font-weight: 700;
+  font-size: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.badge-icon {
+  color: white;
+  flex-shrink: 0;
+}
+
+.badge-text {
+  white-space: nowrap;
+}
+
+.certification-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.detail-card:hover {
+  transform: translateX(-8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary);
+}
+
+.detail-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(196, 90, 61, 0.1) 0%, rgba(196, 90, 61, 0.05) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+.detail-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.detail-description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.certification-footer {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .certification-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.trust-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .trust-indicators {
+    justify-content: flex-start;
+  }
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #495057;
+  font-weight: 600;
+}
+
+.trust-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(196, 90, 61, 0.3);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(196, 90, 61, 0.4);
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+}
+
+.cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover svg {
+  transform: translateX(-4px);
+}
+
+/* Accessibility improvements */
+.cta-button:focus-visible,
+.detail-card:focus-within {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  .certification-section {
+    padding: 60px 16px;
+  }
+  
+  .certification-header {
+    margin-bottom: 40px;
+  }
+  
+  .certification-badge {
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+  
+  .detail-card {
+    padding: 20px;
+  }
+  
+  .detail-icon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .detail-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .certification-footer {
+    padding: 28px 20px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Print styles */
+@media print {
+  .certification-section {
+    padding: 40px 0;
+    background: white;
+  }
+  
+  .cta-button,
+  .certification-badge {
+    display: none;
+  }
+}
+```
+
+##
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
