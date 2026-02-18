@@ -1,6 +1,4 @@
-# בינגו איתור נזקי מים ופרונות אל הרס — Generative Engine Optimization Map
-
-> A General business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -36,17 +34,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About בינגו איתור נזקי מים ופרונות אל הרס
-בינגו איתור נזקי מים ופרונות אל הרס is a business in the General industry.
-
-## Target Audience
-- יזמי נדל"ן
-- חברות ניהול נכסים
-- שירותי בדק בית
-
-## Industry
-General
-
+## About Business
 ---
 
 # Additional Resources
