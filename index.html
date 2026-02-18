@@ -30,6 +30,210 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.home-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* Full-bleed background image */
+.home-hero-section .home-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Scrim overlay for text legibility */
+.home-hero-section .home-hero-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(165deg, rgba(43, 42, 40, 0.75) 0%, rgba(43, 42, 40, 0.85) 50%, rgba(43, 42, 40, 0.90) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content overlay */
+.home-hero-section .home-hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-hero-section .home-hero-text-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Headline */
+.home-hero-section .home-hero-headline {
+  font-family: 'Frank Ruhl Libre', 'Arimo', serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+  margin: 0 0 24px 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtitle */
+.home-hero-section .home-hero-subtitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin: 0 0 40px 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Group */
+.home-hero-section .home-hero-cta-group {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Base */
+.home-hero-section .home-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Primary Button */
+.home-hero-section .home-hero-btn-primary {
+  background: var(--primary);
+  color: var(--text-light);
+  border: 2px solid var(--primary);
+  box-shadow: 0 8px 20px rgba(196, 90, 61, 0.3);
+}
+
+.home-hero-section .home-hero-btn-primary:hover {
+  background: #B04F30;
+  border-color: #B04F30;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(196, 90, 61, 0.4);
+}
+
+/* Secondary Button */
+.home-hero-section .home-hero-btn-secondary {
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid rgba(250, 243, 231, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.home-hero-section .home-hero-btn-secondary:hover {
+  background: rgba(250, 243, 231, 0.1);
+  border-color: rgba(250, 243, 231, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Decorative geometric accent */
+.home-hero-section .home-hero-accent-shape {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 120px;
+  height: 120px;
+  color: var(--accent);
+  opacity: 0.4;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-hero-section {
+    min-height: 500px;
+    height: 100vh;
+    padding-top: 100px;
+  }
+  
+  .home-hero-section .home-hero-content {
+    padding: 0 16px;
+  }
+  
+  .home-hero-section .home-hero-headline {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .home-hero-section .home-hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  
+  .home-hero-section .home-hero-cta-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .home-hero-section .home-hero-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+  
+  .home-hero-section .home-hero-accent-shape {
+    width: 80px;
+    height: 80px;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-section .home-hero-headline {
+    font-size: 32px;
+  }
+  
+  .home-hero-section .home-hero-subtitle {
+    font-size: 16px;
+  }
+}
+</style>
 <!-- Zappy Analytics -->
 <script>
 (function() {
@@ -308,35 +512,33 @@
 </nav>
   
   <main>
-    <section class="home-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-card" id="temp-section-1771361408123-1771362007421-hrsxd6aoi">
-  <!-- Background Image -->
-  <h1 data-element-id="move-1771362240756-l9m3l44l">איתור נזקי מים בדיוק ובמקצועיות</h1><a href="/services" class="home-hero-btn-secondary" data-element-type="button" data-element-id="btn-1771362228278-yctc17ecm" data-native-element="true">גלו את השירותים</a><h3>אנחנו מתמחים באיתור נזקי מים ופרונות באמצעות טכנולוגיה מתקדמת. עבודה מדויקת, שירות אמין, ופתרונות שמונעים נזקים עתידיים.</h3><img data-hero-bg="true" class="home-hero-bg zappy-editable-image" data-preserve-bg="0" data-placeholder="home-hero-image-1" data-context="Professional water damage detection workspace with warm natural daylight streaming through windows, showing subtle textures of plaster walls and wooden surfaces, warm earth tones, soft shadows, peaceful atmosphere, high-quality professional photography, shallow depth of field, inviting and trustworthy feeling" width="1920" height="1080" src="/assets/site-home-hero-image-1.webp" alt="סביבת עבודה מקצועית לאיתור נזקי מים" data-element-type="image" data-element-id="img-1771362228287-nsb7o0y97" style="object-position: 50% 50%;" data-resize-handler-attached="true">
+    <section class="home-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-scrim" data-zappy-section="true">
+  <!-- Full-bleed background image -->
+  <div class="home-hero-bg" role="img" aria-label="סביבת עבודה מקצועית לאיתור נזקי מים" style="background-image: url('assets/site-home-hero-image-1.webp');  background-size: cover; background-position: center;"></div>
   
-  <!-- Gradient Scrim Overlay for Text Legibility -->
+  <!-- Scrim overlay for text legibility -->
   <div class="home-hero-scrim" aria-hidden="true"></div>
   
-  <!-- Content Overlay Card -->
+  <!-- Content overlay -->
   <div class="home-hero-content">
-    <div class="home-hero-card">
-      
-      
+    <div class="home-hero-text-wrapper">
+      <h1 class="home-hero-headline">איתור נזקי מים<br>בדיוק ובמקצועיות</h1>
+      <h3 class="home-hero-subtitle">אנחנו מתמחים באיתור נזקי מים ופרונות באמצעות טכנולוגיה מתקדמת. עבודה מדויקת, שירות אמין, ופתרונות שמונעים נזקים עתידיים.</h3>
       <div class="home-hero-cta-group">
-        
-        
+        <a href="/services" class="home-hero-btn home-hero-btn-primary">גלו את השירותים</a>
+        <a href="/contact" class="home-hero-btn home-hero-btn-secondary">צרו קשר</a>
       </div>
     </div>
   </div>
   
-  <!-- Bottom Divider: Film Grain Fade + Hand-Drawn Arc -->
-  <div class="home-hero-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Base fill matching next section (cream/light) -->
-      <path d="M0,100 L0,60 Q100,58 200,62 T400,58 Q500,62 600,60 T800,62 Q900,58 1000,60 T1200,62 L1200,100 Z" fill="var(--bg-light)" opacity="0.95"></path>
-      <!-- Hand-drawn arc line -->
-      <path d="M0,60 Q100,58 200,62 T400,58 Q500,62 600,60 T800,62 Q900,58 1000,60 T1200,62" fill="none" stroke="var(--border-light)" stroke-width="1.5" opacity="0.6"></path>
-    </svg>
-  </div>
-<a href="/contact" class="home-hero-btn-primary" data-element-type="button" data-element-id="zappy-drop-bibg177ny" data-native-element="true" style="outline: none;">צרו קשר</a></section>
+  <!-- Decorative geometric accent -->
+  <svg class="home-hero-accent-shape" data-no-icon-edit="true" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+    <circle cx="60" cy="60" r="58" stroke="currentColor" stroke-width="1.5" opacity="0.3"></circle>
+    <circle cx="60" cy="60" r="45" stroke="currentColor" stroke-width="1" opacity="0.2"></circle>
+    <line x1="60" y1="15" x2="60" y2="105" stroke="currentColor" stroke-width="1" opacity="0.15"></line>
+    <line x1="15" y1="60" x2="105" y2="60" stroke="currentColor" stroke-width="1" opacity="0.15"></line>
+  </svg>
+</section>
 
 
 
