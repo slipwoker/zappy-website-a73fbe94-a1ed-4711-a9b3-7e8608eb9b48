@@ -5,29 +5,29 @@
 ## Pages
 
 ### בית
-https://bingo-water-damage-detection-a.zappy5.app
+https://ns-bingo.co.il
 
 ### אודות
-https://bingo-water-damage-detection-a.zappy5.app/about
+https://ns-bingo.co.il/about
 
 ### שירותים
-https://bingo-water-damage-detection-a.zappy5.app/services
+https://ns-bingo.co.il/services
 
 ### צור קשר
-https://bingo-water-damage-detection-a.zappy5.app/contact
+https://ns-bingo.co.il/contact
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://bingo-water-damage-detection-a.zappy5.app/privacy
+https://ns-bingo.co.il/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://bingo-water-damage-detection-a.zappy5.app/terms
+https://ns-bingo.co.il/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://bingo-water-damage-detection-a.zappy5.app/accessibility
+https://ns-bingo.co.il/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -39,5 +39,5 @@ Information about WCAG compliance and accessibility features.
 
 # Additional Resources
 
-- **Sitemap**: https://bingo-water-damage-detection-a.zappy5.app/sitemap.xml
-- **Robots.txt**: https://bingo-water-damage-detection-a.zappy5.app/robots.txt
+- **Sitemap**: https://ns-bingo.co.il/sitemap.xml
+- **Robots.txt**: https://ns-bingo.co.il/robots.txt

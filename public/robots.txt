@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bingo-water-damage-detection-a.zappy5.app/sitemap.xml
+Sitemap: https://ns-bingo.co.il/sitemap.xml
