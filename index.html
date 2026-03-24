@@ -1572,322 +1572,325 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 
 
-<section style="position:relative;width:100%;max-width:100%;box-sizing:border-box;overflow:hidden;background:var(--bg-dark);" data-zappy-section="true" class="section" id="layout-1774361077279">
+<section style="width:100%;max-width:100%;box-sizing:border-box;position:relative;overflow:hidden;background:var(--bg-dark);" data-zappy-section="true" class="section" id="layout-1774361077279">
 <style>
   .bingo-gallery-section {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
     direction: rtl;
     font-family: system-ui, sans-serif;
+    position: relative;
   }
 
-  .bingo-gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50vh 50vh;
+  .bingo-gallery-section * {
+    box-sizing: border-box;
+  }
+
+  /* HERO STRIP */
+  .bg-hero-strip {
+    position: relative;
     width: 100%;
     min-height: 100vh;
-  }
-
-  .bingo-gallery-cell {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .bingo-gallery-cell[data-preserve-bg] {
-    background-size: cover;
-    background-position: center;
-    min-height: unset;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease;
-  }
-
-  .bingo-gallery-cell:hover {
-    transform: scale(1.03);
-  }
-
-  .bingo-cell-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(43,42,40,0.1) 0%, rgba(43,42,40,0.7) 100%);
-    z-index: 1;
-    transition: background 0.4s ease;
-  }
-
-  .bingo-gallery-cell:hover .bingo-cell-overlay {
-    background: linear-gradient(180deg, rgba(196,90,61,0.15) 0%, rgba(43,42,40,0.75) 100%);
-  }
-
-  /* Main hero cell spans 2 columns and 2 rows */
-  .bingo-cell-hero {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-  }
-
-  .bingo-cell-hero[data-preserve-bg] {
-    background-size: cover;
-    background-position: center;
-    min-height: unset;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Side cells */
-  .bingo-cell-top {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-  }
-
-  .bingo-cell-bottom {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-  }
-
-  /* Central content overlay on hero */
-  .bingo-hero-content {
-    position: absolute;
-    inset: 0;
-    z-index: 10;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    background: linear-gradient(135deg, rgba(43,42,40,0.55) 0%, rgba(196,90,61,0.25) 50%, rgba(43,42,40,0.6) 100%);
   }
 
-  .bingo-hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--accent);
+  .bg-hero-strip::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(43,42,40,0.85) 0%, rgba(196,90,61,0.45) 60%, rgba(43,42,40,0.7) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .badge-pro {
+    display: inline-block;
+    background: var(--gradient-gold-accent);
     color: var(--bg-dark);
     font-size: 0.85rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 0.4rem 1.2rem;
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
+    letter-spacing: 0.15em;
+    padding: 6px 22px;
+    border-radius: 50px;
+    margin-bottom: 22px;
     text-transform: uppercase;
-    box-shadow: 0 4px 20px rgba(214,179,106,0.4);
+    box-shadow: 0 2px 18px rgba(214,179,106,0.45);
     animation: badgePulse 2.5s ease-in-out infinite;
   }
 
   @keyframes badgePulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(214,179,106,0.4); }
-    50% { box-shadow: 0 4px 40px rgba(214,179,106,0.8); }
+    0%,100% { box-shadow: 0 2px 18px rgba(214,179,106,0.45); }
+    50% { box-shadow: 0 4px 32px rgba(214,179,106,0.75); }
   }
 
-  .bingo-hero-title {
-    font-size: clamp(2.5rem, 6vw, 5rem);
+  .hero-title {
+    font-size: clamp(2.8rem, 8vw, 6.5rem);
     font-weight: 900;
     color: var(--text-light);
-    line-height: 1.1;
-    margin: 0 0 1.5rem 0;
-    text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0 0 18px;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.6);
     position: relative;
   }
 
-  .bingo-hero-title::after {
-    content: '';
+  .hero-title span {
     display: block;
-    width: 80px;
-    height: 4px;
     background: var(--gradient-gold-accent);
-    margin: 1rem auto 0;
-    border-radius: 2px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .bingo-hero-brand {
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    color: var(--accent);
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    margin-top: 0.5rem;
-    opacity: 0.95;
+  /* ICONS ROW */
+  .icons-row {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .icon-chip {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(214,179,106,0.3);
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    cursor: default;
   }
 
-  /* Diagonal accent bar */
-  .bingo-diagonal-accent {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 33.33%;
-    height: 100%;
-    z-index: 5;
-    pointer-events: none;
+  .icon-chip:hover {
+    background: rgba(214,179,106,0.18);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(214,179,106,0.25);
   }
 
-  .bingo-diagonal-accent::before {
+  .icon-chip svg {
+    flex-shrink: 0;
+  }
+
+  /* GALLERY STRIP BELOW */
+  .gallery-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    position: relative;
+  }
+
+  .gallery-cell {
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+  }
+
+  .gallery-cell::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: -2px;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 60%;
-    background: var(--gradient-gold-accent);
-    border-radius: 2px;
-    box-shadow: 0 0 20px rgba(214,179,106,0.6);
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(43,42,40,0.7) 100%);
+    z-index: 1;
+    transition: background 0.4s ease;
   }
 
-  /* Bottom bar */
-  .bingo-bottom-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  .gallery-cell:hover::after {
+    background: linear-gradient(180deg, rgba(196,90,61,0.2) 0%, rgba(43,42,40,0.8) 100%);
+  }
+
+  .gallery-cell-bg {
     width: 100%;
-    z-index: 20;
-    background: rgba(43,42,40,0.92);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 2rem;
-    border-top: 1px solid rgba(214,179,106,0.3);
+    height: 100%;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .bingo-bottom-bar-text {
-    color: var(--accent);
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+  .gallery-cell:hover .gallery-cell-bg {
+    transform: scale(1.08);
   }
 
-  /* Side cell labels */
-  .bingo-side-label {
+  .gallery-cell-label {
     position: absolute;
-    bottom: 1.2rem;
-    right: 1rem;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    background: var(--primary);
+    bottom: 18px;
+    right: 18px;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(196,90,61,0.5);
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 16px rgba(196,90,61,0.5);
+    transition: transform 0.3s ease;
   }
 
-  .bingo-gallery-cell:hover .bingo-side-label {
-    opacity: 1;
-    transform: scale(1);
+  .gallery-cell:hover .gallery-cell-label {
+    transform: scale(1.2) rotate(10deg);
   }
 
-  /* Shimmer line animation on accent */
-  .bingo-shimmer {
+  /* DIAGONAL DIVIDER between hero and gallery */
+  .diag-divider {
+    position: relative;
+    height: 70px;
+    background: var(--bg-dark);
+    overflow: hidden;
+    z-index: 5;
+  }
+
+  .diag-divider::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--bg-dark);
+    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+  }
+
+  /* BOTTOM SVG DIVIDER */
+  .bottom-divider-wrap {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px;
-    background: var(--gradient-gold-shine);
-    z-index: 15;
-    animation: shimmerMove 3s ease-in-out infinite;
-  }
-
-  @keyframes shimmerMove {
-    0% { opacity: 0.4; transform: scaleX(0.5); }
-    50% { opacity: 1; transform: scaleX(1); }
-    100% { opacity: 0.4; transform: scaleX(0.5); }
+    height: 60px;
+    pointer-events: none;
+    z-index: 5;
   }
 
   @media (max-width: 768px) {
-    .bingo-gallery-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      min-height: unset;
-    }
-
-    .bingo-cell-hero {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-      min-height: 60vh;
-    }
-
-    .bingo-cell-top {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      min-height: 35vw;
-    }
-
-    .bingo-cell-bottom {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-      min-height: 35vw;
-    }
-
-    .bingo-hero-content {
+    .bg-hero-strip {
+      min-height: auto;
       padding-top: 100px;
     }
-
-    .bingo-diagonal-accent {
-      display: none;
+    .gallery-strip {
+      grid-template-columns: 1fr;
     }
+    .gallery-cell {
+      min-height: 240px;
+    }
+    .gallery-cell-bg {
+      min-height: 240px;
+    }
+    .icons-row {
+      gap: 12px;
+    }
+    .icon-chip {
+      font-size: 0.8rem;
+      padding: 8px 14px;
+    }
+  }
 
-    .bingo-bottom-bar {
-      position: relative;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-strip {
+      grid-template-columns: 1fr 1fr;
+    }
+    .gallery-cell:last-child {
+      grid-column: 1 / -1;
     }
   }
 </style>
 
 <div class="bingo-gallery-section">
-  <div class="bingo-gallery-grid">
 
-    <!-- Hero cell: Image 0, spans 2×2 -->
-    <div class="bingo-cell-hero" style="background-image: url('assets/business-general-service-upload-1774361411423.webp'); background-size:cover;background-position:center;">
-      <div class="bingo-cell-overlay"></div>
-      <div class="bingo-hero-content">
-        <div class="bingo-hero-badge">
-          <!-- Icon preserved -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-          <span>מקצועי ואמין</span>
+  <!-- HERO BACKGROUND PANEL -->
+  <div class="bg-hero-strip" style="background-image: url('assets/business-general-service-upload-1774361411423.webp'); background-size:cover;background-position:center;">
+    <div class="hero-content">
+      <div class="badge-pro">מקצועי ואמין</div>
+      <h2 class="hero-title">
+        <span>כותרת שלך כאן</span>
+      </h2>
+
+      <!-- 4 ICON CHIPS -->
+      <div class="icons-row">
+        <div class="icon-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          אמינות מלאה
         </div>
-        <h2 class="bingo-hero-title">כותרת שלך כאן</h2>
-        <div class="bingo-hero-brand">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--accent)" stroke="none"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4" fill="var(--bg-dark)"></circle></svg>
-          בינגו איתור נזקי מים
+        <div class="icon-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          מהיר ויעיל
+        </div>
+        <div class="icon-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          טכנולוגיה מתקדמת
+        </div>
+        <div class="icon-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          צוות מומחים
         </div>
       </div>
-      <div class="bingo-shimmer"></div>
     </div>
 
-    <!-- Top side cell: Image 1 -->
-    <div class="bingo-gallery-cell bingo-cell-top" style="background-image: url('assets/business-general-service-upload-1774361450588.webp'); background-size:cover;background-position:center;">
-      <div class="bingo-cell-overlay"></div>
-      <div class="bingo-side-label">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </div>
+    <!-- Bottom wave into gallery -->
+    <div class="bottom-divider-wrap">
+      <svg viewBox="0 0 1200 60" preserveAspectRatio="none" style="display:block;width:100%;height:100%;">
+        <path d="M0,60 C200,10 400,50 600,25 C800,0 1000,40 1200,20 L1200,60 L0,60 Z" fill="var(--bg-dark)" opacity="0.9"></path>
+        <path d="M0,60 C300,20 600,55 900,30 C1050,15 1150,45 1200,35 L1200,60 L0,60 Z" fill="var(--bg-dark)"></path>
+      </svg>
     </div>
-
-    <!-- Bottom side cell: Image 2 -->
-    <div class="bingo-gallery-cell bingo-cell-bottom" style="background-image: url('assets/business-general-service-upload-1774361784586.webp'); background-size:cover;background-position:center;">
-      <div class="bingo-cell-overlay"></div>
-      <div class="bingo-side-label">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-      </div>
-    </div>
-
   </div>
 
-  <!-- Diagonal accent separator line between main and side cells -->
-  <div class="bingo-diagonal-accent"></div>
+  <!-- IMAGE GALLERY STRIP -->
+  <div class="gallery-strip">
+    <div class="gallery-cell">
+      <div class="gallery-cell-bg" style="background-image: url('assets/business-general-service-upload-1774361450588.webp'); background-size:cover;background-position:center;"></div>
+      <div class="gallery-cell-label">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FAF3E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+    </div>
+
+    <div class="gallery-cell">
+      <div class="gallery-cell-bg" style="background-image: url('assets/business-general-service-upload-1774361784586.webp'); background-size:cover;background-position:center;"></div>
+      <div class="gallery-cell-label">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FAF3E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"></path><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Decorative third cell -->
+    <div class="gallery-cell" style="background:var(--gradient-dark-section);display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;padding:30px;z-index:2;position:relative;">
+        <div style="width:70px;height:70px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 8px 32px rgba(196,90,61,0.5);">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FAF3E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <p style="color:var(--accent);font-weight:800;font-size:1.1rem;margin:0 0 8px;letter-spacing:0.05em;">מקצועי ואמין</p>
+        <p style="color:var(--text-light);opacity:0.7;font-size:0.85rem;margin:0;">בינגו איתור נזקי מים</p>
+        <div style="width:40px;height:3px;background:var(--gradient-gold-accent);border-radius:2px;margin:14px auto 0;"></div>
+      </div>
+    </div>
+  </div>
 
 </div>
 </section>
